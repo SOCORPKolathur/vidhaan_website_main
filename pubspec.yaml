@@ -1,0 +1,577 @@
+name: vidhaan_website_main
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.1 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  google_fonts: ^5.1.0
+  animated_text_kit: ^4.2.2
+  page_transition: ^2.1.0
+  animate_do: ^3.3.4
+  firebase_core: ^2.27.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/
+    - assets/page-1/images/removal-2.png
+    - assets/page-1/images/natural-user-interface-2.png
+    - assets/page-1/images/removal-2-7Pa.png
+    - assets/page-1/images/removal-2-G5z.png
+    - assets/page-1/images/waves.png
+    - assets/page-1/images/facebook.png
+    - assets/page-1/images/removal-2-WTe.png
+    - assets/page-1/images/vidhaantext-1.png
+    - assets/page-1/images/waves-6oe.png
+    - assets/page-1/images/removal-2-dPa.png
+    - assets/page-1/images/facebook-31E.png
+    - assets/page-1/images/waves-fqn.png
+    - assets/page-1/images/vector-19.png
+    - assets/page-1/images/twitter-circled.png
+    - assets/page-1/images/ellipse-34.png
+    - assets/page-1/images/polygon-3.png
+    - assets/page-1/images/vidhaantext-1-HNL.png
+    - assets/page-1/images/vector-1.png
+    - assets/page-1/images/waves-hvC.png
+    - assets/page-1/images/waves-ATE.png
+    - assets/page-1/images/ringer-volume.png
+    - assets/page-1/images/polygon-5.png
+    - assets/page-1/images/waves-qWL.png
+    - assets/page-1/images/waves-PGG.png
+    - assets/page-1/images/frame-14259.png
+    - assets/page-1/images/removal-2-i8c.png
+    - assets/page-1/images/vector-19-rmr.png
+    - assets/page-1/images/vidhaantext-1-yLg.png
+    - assets/page-1/images/group-100.png
+    - assets/page-1/images/polygon-1.png
+    - assets/page-1/images/waves-mcG.png
+    - assets/page-1/images/waves-n3W.png
+    - assets/page-1/images/dawn.png
+    - assets/page-1/images/frame-14259-1PJ.png
+    - assets/page-1/images/waves-MTA.png
+    - assets/page-1/images/waves-GKE.png
+    - assets/page-1/images/dawn-j6C.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1.png
+    - assets/page-1/images/waves-CRa.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-fW4.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-2.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4.png
+    - assets/page-1/images/waves-JZa.png
+    - assets/page-1/images/waves-gtC.png
+    - assets/page-1/images/place-marker.png
+    - assets/page-1/images/vector-18.png
+    - assets/page-1/images/marked-mail.png
+    - assets/page-1/images/waves-RRW.png
+    - assets/page-1/images/waves-LgC.png
+    - assets/page-1/images/waves-LX6.png
+    - assets/page-1/images/marked-mail-Kkp.png
+    - assets/page-1/images/waves-Gvx.png
+    - assets/page-1/images/waves-bdn.png
+    - assets/page-1/images/ellipse-36.png
+    - assets/page-1/images/vector-1-WtU.png
+    - assets/page-1/images/waves-AaG.png
+    - assets/page-1/images/waves-fxG.png
+    - assets/page-1/images/polygon-6.png
+    - assets/page-1/images/natural-user-interface-2-eBv.png
+    - assets/page-1/images/polygon-4.png
+    - assets/page-1/images/vector.png
+    - assets/page-1/images/waves-HQY.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-vuz.png
+    - assets/page-1/images/polygon-1-Q1r.png
+    - assets/page-1/images/pngtreewhiteboard-work-and-study-tools8270760-1-bg.png
+    - assets/page-1/images/ellipse-35.png
+    - assets/page-1/images/pngtreewhiteboard-work-and-study-tools8270760-1-bg-KCx.png
+    - assets/page-1/images/pngtreewhiteboard-work-and-study-tools8270760-1-bg-coW.png
+    - assets/page-1/images/pngtreewhiteboard-work-and-study-tools8270760-1-bg-U8C.png
+    - assets/page-1/images/pngtreewhiteboard-work-and-study-tools8270760-1-bg-neg.png
+    - assets/page-1/images/removal-2-6m2.png
+    - assets/page-1/images/waves-Lgc.png
+    - assets/page-1/images/vector-1-gVa.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-Eax.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-4Qt.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-kZr.png
+    - assets/page-1/images/removal-2-xKn.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5.png
+    - assets/page-1/images/iphone-15-pro.png
+    - assets/page-1/images/.png
+    - assets/page-1/images/vector-1-uYG.png
+    - assets/page-1/images/instagram-circle.png
+    - assets/page-1/images/vector-E5z.png
+    - assets/page-1/images/instagram-circle-FhE.png
+    - assets/page-1/images/dashboard2-1-photoroom-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-a5J.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-CcU.png
+    - assets/page-1/images/-ZC8.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-1sJ.png
+    - assets/page-1/images/place-marker-sT2.png
+    - assets/page-1/images/removal-2-orU.png
+    - assets/page-1/images/vector-1-Zak.png
+    - assets/page-1/images/removal-2-vgC.png
+    - assets/page-1/images/removal-2-3CQ.png
+    - assets/page-1/images/-zdS.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1.png
+    - assets/page-1/images/group-101.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-4fn.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-ae8.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-wXr.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-cNx.png
+    - assets/page-1/images/removal-2-f9N.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-9uW.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-Xek.png
+    - assets/page-1/images/-Qf6.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-axt.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-uVN.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-wS4.png
+    - assets/page-1/images/removal-2-zv8.png
+    - assets/page-1/images/photoroom-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-Bpg.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-5QG.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-YuA.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-qtG.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-2-BBS.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-VJL.png
+    - assets/page-1/images/group-84.png
+    - assets/page-1/images/-2X6.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-EaY.png
+    - assets/page-1/images/photoroom-1-z1S.png
+    - assets/page-1/images/-JbE.png
+    - assets/page-1/images/vidhaantext-1-Aa8.png
+    - assets/page-1/images/-p8C.png
+    - assets/page-1/images/removal-2-XQx.png
+    - assets/page-1/images/-Zuv.png
+    - assets/page-1/images/removal-2-6tL.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-iAG.png
+    - assets/page-1/images/-8a8.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-8k4.png
+    - assets/page-1/images/twitter-circled-GLU.png
+    - assets/page-1/images/-9QG.png
+    - assets/page-1/images/removal-2-i1z.png
+    - assets/page-1/images/removal-2-2j6.png
+    - assets/page-1/images/image-22.png
+    - assets/page-1/images/untitled-1-1.png
+    - assets/page-1/images/dawn-SLk.png
+    - assets/page-1/images/waves-p1A.png
+    - assets/page-1/images/bg.png
+    - assets/page-1/images/waves-jHW.png
+    - assets/page-1/images/vidhaantext-1-93S.png
+    - assets/page-1/images/image-21.png
+    - assets/page-1/images/removal-2-DMW.png
+    - assets/page-1/images/waves-seL.png
+    - assets/page-1/images/place-marker-2vQ.png
+    - assets/page-1/images/removal-2-dsa.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-ZsS.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-A5A.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-xvQ.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-fpp.png
+    - assets/page-1/images/group-1.png
+    - assets/page-1/images/image-29.png
+    - assets/page-1/images/image-17.png
+    - assets/page-1/images/ringer-volume-gfn.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-h8G.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-oLx.png
+    - assets/page-1/images/i301004sm004c13-1-bg.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-DEk.png
+    - assets/page-1/images/ringer-volume-xTE.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-hQp.png
+    - assets/page-1/images/image-19.png
+    - assets/page-1/images/-2xt.png
+    - assets/page-1/images/-HCx.png
+    - assets/page-1/images/vector-1-eQU.png
+    - assets/page-1/images/purple-phone-or-tablet-with-orange-stylus-3d-illustration-2.png
+    - assets/page-1/images/image-26.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-XzU.png
+    - assets/page-1/images/removebg-1.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-V5v.png
+    - assets/page-1/images/image-18.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-6jv.png
+    - assets/page-1/images/accountant2-1.png
+    - assets/page-1/images/photoroom-1-KCY.png
+    - assets/page-1/images/vector-1-tXN.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-CHA.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-XEL.png
+    - assets/page-1/images/facebook-SWG.png
+    - assets/page-1/images/image-23.png
+    - assets/page-1/images/image-28.png
+    - assets/page-1/images/image-31.png
+    - assets/page-1/images/instagram-circle-MkG.png
+    - assets/page-1/images/image-35.png
+    - assets/page-1/images/photoroom-1-skx.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-di4.png
+    - assets/page-1/images/image-33.png
+    - assets/page-1/images/image-38.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-Y7n.png
+    - assets/page-1/images/image-37.png
+    - assets/page-1/images/image-36.png
+    - assets/page-1/images/image-32.png
+    - assets/page-1/images/image-17-fLp.png
+    - assets/page-1/images/removal-2-rV2.png
+    - assets/page-1/images/image-20.png
+    - assets/page-1/images/marked-mail-6Mz.png
+    - assets/page-1/images/image-30.png
+    - assets/page-1/images/removal-3.png
+    - assets/page-1/images/image-34.png
+    - assets/page-1/images/image-25.png
+    - assets/page-1/images/vidhaantext-1-H88.png
+    - assets/page-1/images/image-24.png
+    - assets/page-1/images/d-illustration-casual-man-with-smile-his-face-photoroom-1.png
+    - assets/page-1/images/natural-user-interface-2-2pk.png
+    - assets/page-1/images/twitter-circled-4qz.png
+    - assets/page-1/images/m003t0636cconfutiondecision06oct22-photoroom-1.png
+    - assets/page-1/images/waves-qzL.png
+    - assets/page-1/images/-yg8.png
+    - assets/page-1/images/vector-11.png
+    - assets/page-1/images/group-68.png
+    - assets/page-1/images/waves-ec4.png
+    - assets/page-1/images/vector-fTr.png
+    - assets/page-1/images/vector-1-DA4.png
+    - assets/page-1/images/group-68-UBE.png
+    - assets/page-1/images/vector-R7r.png
+    - assets/page-1/images/waves-ZVN.png
+    - assets/page-1/images/vector-10.png
+    - assets/page-1/images/waves-dTz.png
+    - assets/page-1/images/group-68-iNY.png
+    - assets/page-1/images/group-68-ndi.png
+    - assets/page-1/images/waves-4Jp.png
+    - assets/page-1/images/vector-1-BcY.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-3.png
+    - assets/page-1/images/photoroom-1-DiL.png
+    - assets/page-1/images/schedule-1.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-zeY.png
+    - assets/page-1/images/file-1.png
+    - assets/page-1/images/natural-user-interface-2-ZCx.png
+    - assets/page-1/images/benchmarking-1.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-4.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-3-Tat.png
+    - assets/page-1/images/vidhaantext-1-XNU.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-2.png
+    - assets/page-1/images/vidhaantext-1-sPi.png
+    - assets/page-1/images/light-bulb-left-side-with-white-background.png
+    - assets/page-1/images/image-13.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-TTA.png
+    - assets/page-1/images/online-lesson-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-CVJ.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-1-LwE.png
+    - assets/page-1/images/instagram-circle-jq6.png
+    - assets/page-1/images/investment.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-1-vF6.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-vEY.png
+    - assets/page-1/images/twitter-circled-FME.png
+    - assets/page-1/images/bg-YR2.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-2-KZv.png
+    - assets/page-1/images/spyware-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-KZn.png
+    - assets/page-1/images/m506t00124pose12aug22-bg.png
+    - assets/page-1/images/dashboard2-1-photoroom-1-yde.png
+    - assets/page-1/images/removal-2-RBJ.png
+    - assets/page-1/images/ringer-volume-SU4.png
+    - assets/page-1/images/agreement.png
+    - assets/page-1/images/manage-1.png
+    - assets/page-1/images/custom-1.png
+    - assets/page-1/images/bg-CxC.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-14g.png
+    - assets/page-1/images/marked-mail-jEk.png
+    - assets/page-1/images/dashboard.png
+    - assets/page-1/images/exam-1.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-JNg.png
+    - assets/page-1/images/report.png
+    - assets/page-1/images/removal-3-9CG.png
+    - assets/page-1/images/authorization-1.png
+    - assets/page-1/images/facebook-ZpQ.png
+    - assets/page-1/images/attendance-1.png
+    - assets/page-1/images/group-1-qAL.png
+    - assets/page-1/images/place-marker-1UQ.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-ycx.png
+    - assets/page-1/images/d-render-hand-with-light-bulb-creative-idea-1-S9r.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-R1e.png
+    - assets/page-1/images/automation.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-VDE.png
+    - assets/page-1/images/frame-14338.png
+    - assets/page-1/images/waves-aDi.png
+    - assets/page-1/images/frame-14339.png
+    - assets/page-1/images/waves-ScL.png
+    - assets/page-1/images/polygon-1-sxQ.png
+    - assets/page-1/images/dawn-v2g.png
+    - assets/page-1/images/rectangle-5.png
+    - assets/page-1/images/ellipse-18.png
+    - assets/page-1/images/waves-Bf2.png
+    - assets/page-1/images/vector-1-cjW.png
+    - assets/page-1/images/auto-group-zxr6.png
+    - assets/page-1/images/auto-group-dzct.png
+    - assets/page-1/images/waves-mpx.png
+    - assets/page-1/images/dawn-bME.png
+    - assets/page-1/images/polygon-3-YWY.png
+    - assets/page-1/images/waves-qwS.png
+    - assets/page-1/images/ellipse-4.png
+    - assets/page-1/images/waves-AtL.png
+    - assets/page-1/images/frame-14365.png
+    - assets/page-1/images/waves-Q9A.png
+    - assets/page-1/images/vector-YnY.png
+    - assets/page-1/images/vector-4Xe.png
+    - assets/page-1/images/place-marker-Voa.png
+    - assets/page-1/images/hand-with-pen.png
+    - assets/page-1/images/flexible-2.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-BvL.png
+    - assets/page-1/images/pen.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-vrG.png
+    - assets/page-1/images/unsplash-abuzwpku1ug-bg.png
+    - assets/page-1/images/pen-EMA.png
+    - assets/page-1/images/pen-hfi.png
+    - assets/page-1/images/vidhaantext-1-o96.png
+    - assets/page-1/images/user-interface-1.png
+    - assets/page-1/images/photoroom-1-bg.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-7w2.png
+    - assets/page-1/images/twitter-circled-UwW.png
+    - assets/page-1/images/vidhaantext-1-1kx.png
+    - assets/page-1/images/image-3.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-7Pa.png
+    - assets/page-1/images/image-6.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-sQG.png
+    - assets/page-1/images/pen-n4C.png
+    - assets/page-1/images/removal-3-Z7J.png
+    - assets/page-1/images/instagram-circle-Sgt.png
+    - assets/page-1/images/logbook.png
+    - assets/page-1/images/photoroom-1-bg-DAU.png
+    - assets/page-1/images/photoroom-1-bg-9FS.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-vfv.png
+    - assets/page-1/images/social-care.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-TGY.png
+    - assets/page-1/images/rectangle-41.png
+    - assets/page-1/images/unsplash-8yg31xn4dsw-bg.png
+    - assets/page-1/images/removal-2-2Uc.png
+    - assets/page-1/images/pen-Pxp.png
+    - assets/page-1/images/photoroom-1-SBN.png
+    - assets/page-1/images/customer-service.png
+    - assets/page-1/images/dashboard2-1-photoroom-1-YoN.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-FTa.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-tKE.png
+    - assets/page-1/images/ringer-volume-Wvg.png
+    - assets/page-1/images/natural-user-interface-2-5me.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-1XJ.png
+    - assets/page-1/images/photoroom-1-CEY.png
+    - assets/page-1/images/hand-with-pen-8Lt.png
+    - assets/page-1/images/blue-thumbtack-removebg-preview-1.png
+    - assets/page-1/images/vidhaantext-1-aBN.png
+    - assets/page-1/images/pen-Vb2.png
+    - assets/page-1/images/marked-mail-2XE.png
+    - assets/page-1/images/photoroom-1-bg-Q2G.png
+    - assets/page-1/images/unsplash-a3mlea0jtoe-bg.png
+    - assets/page-1/images/image-5.png
+    - assets/page-1/images/facebook-mFr.png
+    - assets/page-1/images/image-7.png
+    - assets/page-1/images/group-100-Jv8.png
+    - assets/page-1/images/auto-group-htvc.png
+    - assets/page-1/images/polygon-1-MoJ.png
+    - assets/page-1/images/waves-8mS.png
+    - assets/page-1/images/place-marker-dJ4.png
+    - assets/page-1/images/waves-ZtG.png
+    - assets/page-1/images/image-4.png
+    - assets/page-1/images/ellipse-7.png
+    - assets/page-1/images/waves-QWg.png
+    - assets/page-1/images/ellipse-11.png
+    - assets/page-1/images/dawn-WFN.png
+    - assets/page-1/images/vector-1-8RA.png
+    - assets/page-1/images/image-46.png
+    - assets/page-1/images/waves-uQY.png
+    - assets/page-1/images/image-47.png
+    - assets/page-1/images/ellipse-8.png
+    - assets/page-1/images/marked-mail-7Ta.png
+    - assets/page-1/images/ringer-volume-3qv.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-Tfr.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-qiL.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-CRS.png
+    - assets/page-1/images/m003t0635cbusinessaimmonitoring06oct22-photoroom-1.png
+    - assets/page-1/images/vidhaantext-1-d72.png
+    - assets/page-1/images/removal-2-b3J.png
+    - assets/page-1/images/vidhaantext-1-Fi4.png
+    - assets/page-1/images/twitter-circled-Anx.png
+    - assets/page-1/images/instagram-circle-Ew6.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-buN.png
+    - assets/page-1/images/facebook-yFr.png
+    - assets/page-1/images/image-43.png
+    - assets/page-1/images/natural-user-interface-2-Ppg.png
+    - assets/page-1/images/group-11.png
+    - assets/page-1/images/place-marker-DVN.png
+    - assets/page-1/images/photoroom-1-bfa.png
+    - assets/page-1/images/image-42.png
+    - assets/page-1/images/send.png
+    - assets/page-1/images/pen-yAt.png
+    - assets/page-1/images/phone.png
+    - assets/page-1/images/pen-s5W.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-4-1PA.png
+    - assets/page-1/images/waves-uek.png
+    - assets/page-1/images/waves-NAx.png
+    - assets/page-1/images/waves-UWY.png
+    - assets/page-1/images/vector-1-bNL.png
+    - assets/page-1/images/linkedin.png
+    - assets/page-1/images/image-44.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-H96.png
+    - assets/page-1/images/badge.png
+    - assets/page-1/images/ringer-volume-ima.png
+    - assets/page-1/images/vector-9.png
+    - assets/page-1/images/waves-JV2.png
+    - assets/page-1/images/waves-cEp.png
+    - assets/page-1/images/ellipse-8-cxc.png
+    - assets/page-1/images/paper-plane.png
+    - assets/page-1/images/removal-3-CQC.png
+    - assets/page-1/images/vector-1-WDa.png
+    - assets/page-1/images/ellipse-6.png
+    - assets/page-1/images/photoroom-1-Jex.png
+    - assets/page-1/images/-QuS.png
+    - assets/page-1/images/photoroom-1-DHn.png
+    - assets/page-1/images/photoroom.png
+    - assets/page-1/images/letter.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-EqA.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-5-h32.png
+    - assets/page-1/images/removal-2-CpL.png
+    - assets/page-1/images/letter-Fi4.png
+    - assets/page-1/images/natural-user-interface-2-nzg.png
+    - assets/page-1/images/d-render-secure-login-password-illustration-photoroom-2.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-GAY.png
+    - assets/page-1/images/sms.png
+    - assets/page-1/images/lettersend-1.png
+    - assets/page-1/images/vidhaantext-1-aM2.png
+    - assets/page-1/images/marked-mail-EVS.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-r1r.png
+    - assets/page-1/images/place-marker-Xdn.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-8iQ.png
+    - assets/page-1/images/photoroom-1-MJ4.png
+    - assets/page-1/images/badge-Zwz.png
+    - assets/page-1/images/pen-8bE.png
+    - assets/page-1/images/twitter-circled-d8p.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-WU4.png
+    - assets/page-1/images/removal-3-EUU.png
+    - assets/page-1/images/facebook-wkx.png
+    - assets/page-1/images/circled-play.png
+    - assets/page-1/images/pen-ALU.png
+    - assets/page-1/images/instagram-circle-Lt4.png
+    - assets/page-1/images/phone-jvL.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-1-ZHv.png
+    - assets/page-1/images/marked-mail-Y3n.png
+    - assets/page-1/images/auto-group-yqza.png
+    - assets/page-1/images/waves-NJG.png
+    - assets/page-1/images/sms-LTE.png
+    - assets/page-1/images/ringer-volume-r6g.png
+    - assets/page-1/images/pen-MhW.png
+    - assets/page-1/images/group-109.png
+    - assets/page-1/images/vidhaantext-1-gMS.png
+    - assets/page-1/images/waves-mSL.png
+    - assets/page-1/images/d-illustration-academic-hat-with-golden-tassel-1-xip.png
+    - assets/page-1/images/modern-equipped-computer-lab-1.png
+    - assets/page-1/images/waves-tsn.png
+    - assets/page-1/images/waves-smW.png
+    - assets/page-1/images/letter-VEU.png
+    - assets/page-1/images/polygon-4-go6.png
+    - assets/page-1/images/polygon-5-hhE.png
+    - assets/page-1/images/group-108.png
+    - assets/page-1/images/close.png
+    - assets/page-1/images/image-15.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-3.png
+    - assets/page-1/images/polygon-5-bMN.png
+    - assets/page-1/images/waves-2je.png
+    - assets/page-1/images/photoroom-1-93z.png
+    - assets/page-1/images/tablet-login-amico-1.png
+    - assets/page-1/images/vidhaantext-1-Vwa.png
+    - assets/page-1/images/group-108-CNg.png
+    - assets/page-1/images/badge-SqA.png
+    - assets/page-1/images/image-16.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-3-FR6.png
+    - assets/page-1/images/group-109-X7S.png
+    - assets/page-1/images/close-duN.png
+    - assets/page-1/images/vidhaantext-1-6TW.png
+    - assets/page-1/images/waves-eQU.png
+    - assets/page-1/images/letter-bjS.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-3-FxG.png
+    - assets/page-1/images/badge-ih2.png
+    - assets/page-1/images/waves-4jn.png
+    - assets/page-1/images/waves-XLx.png
+    - assets/page-1/images/badge-MTS.png
+    - assets/page-1/images/polygon-4-Xak.png
+    - assets/page-1/images/image-15-jqW.png
+    - assets/page-1/images/photoroom-1-2Dr.png
+    - assets/page-1/images/auto-group-hfoa.png
+    - assets/page-1/images/image-16-7Fz.png
+    - assets/page-1/images/m028t0142bteacherresources01sep22-photoroom-3-yx8.png
+    - assets/page-1/images/sign-up-amico-1.png
+    - assets/page-1/images/checked-checkbox.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
