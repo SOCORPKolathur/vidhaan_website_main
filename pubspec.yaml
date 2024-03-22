@@ -40,6 +40,7 @@ dependencies:
   page_transition: ^2.1.0
   animate_do: ^3.3.4
   firebase_core: ^2.27.0
+  rive: ^0.13.1
 
 dev_dependencies:
   flutter_test:

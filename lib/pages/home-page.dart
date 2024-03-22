@@ -2,11 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rive/rive.dart';
 import 'package:vidhaan_website_main/pages/animatedimage.dart';
 import 'package:vidhaan_website_main/utils.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  late RiveAnimationController _controller;
+
+  /// Toggles between play and pause animation states
+  void _togglePlay() =>
+      setState(() => _controller.isActive = !_controller.isActive);
+
+  /// Tracks if the animation is playing by whether controller is running
+  bool get isPlaying => _controller.isActive;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = SimpleAnimation('idle');
+    Future.delayed(const Duration(seconds: 3), () {
+      _togglePlay();
+      setState(() {
+        vis=true;
+      });
+    });
+  }
+  bool vis= false;
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 1366;
@@ -855,7 +884,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            /*Positioned(
               // frame15osa (1:73)
               left: 0*fem,
               top: 0*fem,
@@ -1077,7 +1106,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
+            ),*/
             Positioned(
               // frame14452X2C (1:99)
               left: 83.0000359263*fem,
@@ -3032,6 +3061,22 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+           Positioned(
+                top: 242*fem,
+              right: 58*fem,
+              left:0.0002*fem,
+              child: Container(
+                width:1800,
+              height:1200,
+              
+              child:  RiveAnimation.asset(
+
+                  'assets/pencil animation.riv',
+                  //controllers: [_controller],
+                //onInit: (_) => setState(() {}),
+                ),
+              ),
+            )
           ],
         ),
       ),
