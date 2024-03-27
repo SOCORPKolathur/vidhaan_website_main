@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AnimatedImage extends StatefulWidget {
-  const AnimatedImage({Key? key}) : super(key: key);
+  String imagepath;
+   AnimatedImage(this.imagepath);
 
   @override
   State<AnimatedImage> createState() => _AnimatedImageState();
@@ -27,7 +28,7 @@ class _AnimatedImageState extends State<AnimatedImage> with SingleTickerProvider
   Widget build(BuildContext context) {
     return SlideTransition(
         position: _animation,
-        child: Image.asset("assets/page-1/images/removebg-1.png", )
+        child: Image.asset(widget.imagepath, )
     );
   }
 }

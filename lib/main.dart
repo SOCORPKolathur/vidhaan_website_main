@@ -62,7 +62,7 @@ class _MainPageState extends State<MainPage> {
         children: [
 
           page=="Home" ?
-          SingleChildScrollView(child: FadeInUp(child: HomePage()))
+          FadeInUp(child: HomePage())
               : page=="Features" ?
 
           FadeInRight(child: FeaturesPage())
