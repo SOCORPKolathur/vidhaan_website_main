@@ -2270,7 +2270,7 @@ class FeaturesPage extends StatelessWidget {
                                                                     margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 13.67*fem),
                                                                     width: double.infinity,
                                                                     child: Text(
-                                                                      'Alumini Management :',
+                                                                      'Alumni Management :',
                                                                       textAlign: TextAlign.center,
                                                                       style: SafeGoogleFont (
                                                                         'Simonetta',

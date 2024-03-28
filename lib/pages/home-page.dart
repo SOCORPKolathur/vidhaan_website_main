@@ -1,3 +1,5 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -8,6 +10,11 @@ import 'package:rive/rive.dart';
 import 'package:vidhaan_website_main/pages/animatedimage.dart';
 import 'package:vidhaan_website_main/utils.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:vidhaan_website_main/pages/why-vidhaan-page.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'contacts-page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -69,7 +76,8 @@ class _HomePageState extends State<HomePage> {
   }
   final ScrollController _scrollController = ScrollController();
 
-
+  bool view = false;
+  bool view2 = false;
 
 
 
@@ -80,7 +88,7 @@ class _HomePageState extends State<HomePage> {
     double ffem = fem * 0.97;
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    return SingleChildScrollView(
+    return view == false? view2 == false?SingleChildScrollView(
       controller: _scrollController,
       child: Container(
         width: double.infinity,
@@ -169,6 +177,23 @@ class _HomePageState extends State<HomePage> {
                               'assets/page-1/images/group-101.png',
                               width: 159*fem,
                               height: 124.67*fem,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Positioned(
+                        // wavesDnL (1:40)
+                        left: 560.999989524*fem,
+                        top: 620*fem,
+                        child: Align(
+                          child: SizedBox(
+                            width: 70.82*fem,
+                            height: 51.9*fem,
+                            child: Image.asset(
+                              'assets/page-1/images/waves-PGG.png',
+                              width: 70.82*fem,
+                              height: 51.9*fem,
                             ),
                           ),
                         ),
@@ -301,28 +326,35 @@ class _HomePageState extends State<HomePage> {
                                                       ],
                                                     ),
                                                   ),
-                                                  Container(
-                                                    // frame16FDv (1:26)
-                                                    width: 227*fem,
-                                                    height: 56*fem,
-                                                    decoration: BoxDecoration (
-                                                      border: Border.all(color: Color(0xffffffff)),
-                                                      color: Color(0xffffffff),
-                                                      borderRadius: BorderRadius.only (
-                                                        topLeft: Radius.circular(20*fem),
-                                                        bottomRight: Radius.circular(20*fem),
+                                                  InkWell(
+                                                    onTap:(){
+                                                      setState(() {
+                                                        view=true;
+                                                      });
+                                                    },
+                                                    child: Container(
+                                                      // frame16FDv (1:26)
+                                                      width: 227*fem,
+                                                      height: 56*fem,
+                                                      decoration: BoxDecoration (
+                                                        border: Border.all(color: Color(0xffffffff)),
+                                                        color: Color(0xffffffff),
+                                                        borderRadius: BorderRadius.only (
+                                                          topLeft: Radius.circular(20*fem),
+                                                          bottomRight: Radius.circular(20*fem),
+                                                        ),
                                                       ),
-                                                    ),
-                                                    child: Center(
-                                                      child: Text(
-                                                        'Explore App Features',
-                                                        style: SafeGoogleFont (
-                                                          'Simonetta',
-                                                          fontSize: 16*ffem,
-                                                          fontWeight: FontWeight.w900,
-                                                          height: 1.6399999857*ffem/fem,
-                                                          letterSpacing: 1.28*fem,
-                                                          color: Color(0xff0271c5),
+                                                      child: Center(
+                                                        child: Text(
+                                                          'Explore App Features',
+                                                          style: SafeGoogleFont (
+                                                            'Simonetta',
+                                                            fontSize: 16*ffem,
+                                                            fontWeight: FontWeight.w900,
+                                                            height: 1.6399999857*ffem/fem,
+                                                            letterSpacing: 1.28*fem,
+                                                            color: Color(0xff0271c5),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
@@ -421,11 +453,11 @@ class _HomePageState extends State<HomePage> {
                                                 'assets/page-1/images/iphone-15-pro.png',
                                               ),
                                             ),
-      
+
                                           ],
                                         ),
                                       ),
-      
+
                                     ],
                                   ),
                                 ),
@@ -475,22 +507,6 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ],
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        // wavesDnL (1:40)
-                        left: 560.999989524*fem,
-                        top: 620*fem,
-                        child: Align(
-                          child: SizedBox(
-                            width: 70.82*fem,
-                            height: 51.9*fem,
-                            child: Image.asset(
-                              'assets/page-1/images/waves-PGG.png',
-                              width: 70.82*fem,
-                              height: 51.9*fem,
-                            ),
                           ),
                         ),
                       ),
@@ -778,7 +794,7 @@ class _HomePageState extends State<HomePage> {
                                   maxWidth: 605*fem,
                                 ),
                                 child: Text(
-                                  'Vidhaan, a versatile school management system, effortlessly automates daily school operations, offering insightful reports and 360-degree tracking. This empowers stakeholders to make informed decisions swiftly, enhancing institutional productivity. From coordinating parent-teacher meetings to managing online fee collections and examinations, Fedena handles every process seamlessly and efficiently. As a fully web-based school ERP software, it boasts 100+ excellent modules, 24/7 customer support, and robust data security.',
+                                  'Vidhaan, a versatile school management system, effortlessly automates daily school operations, offering insightful reports and 360-degree tracking. This empowers stakeholders to make informed decisions swiftly, enhancing institutional productivity. From coordinating parent-teacher meetings to managing online fee collections and examinations, Vidhaan handles every process seamlessly and efficiently. As a fully web-based school ERP software, it boasts 100+ excellent modules, 24/7 customer support, and robust data security.',
                                   style: SafeGoogleFont (
                                     'Lato',
                                     fontSize: 16*ffem,
@@ -1286,27 +1302,34 @@ class _HomePageState extends State<HomePage> {
                                                           ],
                                                         ),
                                                       ),
-                                                      Container(
-                                                        // frame16g7N (1:110)
-                                                        width: 131*fem,
-                                                        height: 42*fem,
-                                                        decoration: BoxDecoration (
-                                                          color: Color(0xff0271c5),
-                                                          borderRadius: BorderRadius.only (
-                                                            topLeft: Radius.circular(20*fem),
-                                                            bottomRight: Radius.circular(20*fem),
+                                                      InkWell(
+                                                          onTap:(){
+                                                          setState(() {
+                                                            view2=true;
+                                                          });
+                                                        },
+                                                        child: Container(
+                                                          // frame16g7N (1:110)
+                                                          width: 131*fem,
+                                                          height: 42*fem,
+                                                          decoration: BoxDecoration (
+                                                            color: Color(0xff0271c5),
+                                                            borderRadius: BorderRadius.only (
+                                                              topLeft: Radius.circular(20*fem),
+                                                              bottomRight: Radius.circular(20*fem),
+                                                            ),
                                                           ),
-                                                        ),
-                                                        child: Center(
-                                                          child: Text(
-                                                            'Free Trial',
-                                                            style: SafeGoogleFont (
-                                                              'Simonetta',
-                                                              fontSize: 16*ffem,
-                                                              fontWeight: FontWeight.w900,
-                                                              height: 1.6399999857*ffem/fem,
-                                                              letterSpacing: 1.28*fem,
-                                                              color: Color(0xffffffff),
+                                                          child: Center(
+                                                            child: Text(
+                                                              'Free Trial',
+                                                              style: SafeGoogleFont (
+                                                                'Simonetta',
+                                                                fontSize: 16*ffem,
+                                                                fontWeight: FontWeight.w900,
+                                                                height: 1.6399999857*ffem/fem,
+                                                                letterSpacing: 1.28*fem,
+                                                                color: Color(0xffffffff),
+                                                              ),
                                                             ),
                                                           ),
                                                         ),
@@ -2516,15 +2539,20 @@ class _HomePageState extends State<HomePage> {
                                                               SizedBox(
                                                                 height: 23*fem,
                                                               ),
-                                                              Text(
-                                                                // refundpolicyPfi (1:218)
-                                                                'Refund Policy',
-                                                                style: SafeGoogleFont (
-                                                                  'Lato',
-                                                                  fontSize: 16*ffem,
-                                                                  fontWeight: FontWeight.w400,
-                                                                  height: 1.2*ffem/fem,
-                                                                  color: Color(0xffffffff),
+                                                              InkWell(
+                                                                onTap:(){
+                                                                  _launchUrl();
+                                                                },
+                                                                child: Text(
+                                                                  // refundpolicyPfi (1:218)
+                                                                  'Refund Policy',
+                                                                  style: SafeGoogleFont (
+                                                                    'Lato',
+                                                                    fontSize: 16*ffem,
+                                                                    fontWeight: FontWeight.w400,
+                                                                    height: 1.2*ffem/fem,
+                                                                    color: Color(0xffffffff),
+                                                                  ),
                                                                 ),
                                                               ),
                                                             ],
@@ -2705,7 +2733,7 @@ class _HomePageState extends State<HomePage> {
                                                               ),
                                                               Text(
                                                                 // kolathurchennaiubS (1:232)
-                                                                'Kolathur, Chennai',
+                                                                'Villivakkam, Chennai',
                                                                 textAlign: TextAlign.center,
                                                                 style: SafeGoogleFont (
                                                                   'Lato',
@@ -2744,7 +2772,7 @@ class _HomePageState extends State<HomePage> {
                                                                     ),
                                                                     Text(
                                                                       // dvk (1:235)
-                                                                      '+91 8944575786',
+                                                                      '+91 9941123453',
                                                                       textAlign: TextAlign.center,
                                                                       style: SafeGoogleFont (
                                                                         'Lato',
@@ -2776,7 +2804,7 @@ class _HomePageState extends State<HomePage> {
                                                                     ),
                                                                     Text(
                                                                       // infogmailcom1RW (1:238)
-                                                                      'info@gmail.com',
+                                                                      'vidhaaneducare@gmail.com',
                                                                       textAlign: TextAlign.center,
                                                                       style: SafeGoogleFont (
                                                                         'Lato',
@@ -2820,7 +2848,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     children: [
                                       TextSpan(
-                                        text: '@2023 Agency. All Rights Reserved by ',
+                                        text: '@2024 - All Rights Reserved by ',
                                         style: SafeGoogleFont (
                                           'Simonetta',
                                           fontSize: 16*ffem,
@@ -2908,133 +2936,6 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               Positioned(
-                                // frame14275kLU (1:245)
-                                left: 528.0832519531*fem,
-                                top: 140*fem,
-                                child: Container(
-                                  width: 557.33*fem,
-                                  height: 224.71*fem,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        // frame142742Hz (1:246)
-                                        margin: EdgeInsets.fromLTRB(0.92*fem, 0*fem, 0*fem, 40.71*fem),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Container(
-                                              // joinyourschoolwithustodaykDz (1:247)
-                                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 15*fem),
-                                              child: Text(
-                                                'Join your School with us today.',
-                                                style: SafeGoogleFont (
-                                                  'Simonetta',
-                                                  fontSize: 40*ffem,
-                                                  fontWeight: FontWeight.w900,
-                                                  height: 1.2525*ffem/fem,
-                                                  color: Color(0xff242424),
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              // streamlineyourschooloperations (1:248)
-                                              constraints: BoxConstraints (
-                                                maxWidth: 477*fem,
-                                              ),
-                                              child: Text(
-                                                '"Streamline Your School Operations with Cutting-Edge Management Software: Enhance Efficiency and Organization Today!"',
-                                                style: SafeGoogleFont (
-                                                  'Lato',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w500,
-                                                  height: 1.7899999619*ffem/fem,
-                                                  color: Color(0xa5242424),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Container(
-                                        // frame14270KRW (1:250)
-                                        padding: EdgeInsets.fromLTRB(44*fem, 9.25*fem, 9.42*fem, 8.75*fem),
-                                        width: double.infinity,
-                                        height: 60*fem,
-                                        decoration: BoxDecoration (
-                                          color: Color(0xffeaf7ff),
-                                          borderRadius: BorderRadius.only (
-                                            topLeft: Radius.circular(43.9999961853*fem),
-                                            bottomRight: Radius.circular(27.4999980927*fem),
-                                          ),
-                                        ),
-                                        child: Row(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              // enteryourvalidemailcfW (1:251)
-                                              margin: EdgeInsets.fromLTRB(0*fem, 0.5*fem, 158.92*fem, 0*fem),
-                                              child: Text(
-                                                'Enter your valid email',
-                                                style: SafeGoogleFont (
-                                                  'Lato',
-                                                  fontSize: 16*ffem,
-                                                  fontWeight: FontWeight.w600,
-                                                  height: 1.2*ffem/fem,
-                                                  color: Color(0x68000000),
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              // frame14268ftg (1:252)
-                                              padding: EdgeInsets.fromLTRB(24.42*fem, 8*fem, 24.42*fem, 7*fem),
-                                              height: double.infinity,
-                                              decoration: BoxDecoration (
-                                                color: Color(0xff0271c5),
-                                                borderRadius: BorderRadius.only (
-                                                  topLeft: Radius.circular(21.9999980927*fem),
-                                                  bottomRight: Radius.circular(21.9999980927*fem),
-                                                ),
-                                              ),
-                                              child: Row(
-                                                crossAxisAlignment: CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    // subcribenowLV2 (1:253)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 7.17*fem, 0*fem),
-                                                    child: Text(
-                                                      'Subcribe Now',
-                                                      style: SafeGoogleFont (
-                                                        'Simonetta',
-                                                        fontSize: 16*ffem,
-                                                        fontWeight: FontWeight.w900,
-                                                        height: 1.6399999857*ffem/fem,
-                                                        letterSpacing: 1.28*fem,
-                                                        color: Color(0xffffffff),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    // naturaluserinterface2dj2 (1:254)
-                                                    margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
-                                                    width: 18*fem,
-                                                    height: 18*fem,
-                                                    child: Image.asset(
-                                                      'assets/page-1/images/natural-user-interface-2.png',
-                                                      fit: BoxFit.contain,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Positioned(
                                 // removal2wDv (1:255)
                                 left: 1088.9998307499*fem,
                                 top: 365*fem,
@@ -3104,6 +3005,181 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                               ),
+                              Positioned(
+                                // frame14275kLU (1:245)
+                                left: 528.0832519531*fem,
+                                top: 140*fem,
+                                child: Container(
+                                  width: 557.33*fem,
+                                  height: 224.71*fem,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        // frame142742Hz (1:246)
+                                        margin: EdgeInsets.fromLTRB(0.92*fem, 0*fem, 0*fem, 40.71*fem),
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              // joinyourschoolwithustodaykDz (1:247)
+                                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 15*fem),
+                                              child: Text(
+                                                'Join your School with us today.',
+                                                style: SafeGoogleFont (
+                                                  'Simonetta',
+                                                  fontSize: 40*ffem,
+                                                  fontWeight: FontWeight.w900,
+                                                  height: 1.2525*ffem/fem,
+                                                  color: Color(0xff242424),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              // streamlineyourschooloperations (1:248)
+                                              constraints: BoxConstraints (
+                                                maxWidth: 477*fem,
+                                              ),
+                                              child: Text(
+                                                '"Streamline Your School Operations with Cutting-Edge Management Software: Enhance Efficiency and Organization Today!"',
+                                                style: SafeGoogleFont (
+                                                  'Lato',
+                                                  fontSize: 16*ffem,
+                                                  fontWeight: FontWeight.w500,
+                                                  height: 1.7899999619*ffem/fem,
+                                                  color: Color(0xa5242424),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      Container(
+                                        // frame14270KRW (1:250)
+                                        padding: EdgeInsets.fromLTRB(44*fem, 9.25*fem, 9.42*fem, 8.75*fem),
+                                        width: double.infinity,
+                                        height: 60*fem,
+                                        decoration: BoxDecoration (
+                                          color: Color(0xffeaf7ff),
+                                          borderRadius: BorderRadius.only (
+                                            topLeft: Radius.circular(43.9999961853*fem),
+                                            bottomRight: Radius.circular(27.4999980927*fem),
+                                          ),
+                                        ),
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              // enteryourvalidemailcfW (1:251)
+                                              margin: EdgeInsets.fromLTRB(0*fem, 0.5*fem, 158.92*fem, 0*fem),
+                                              width:250,
+                                              child: TextField(
+                                                decoration: InputDecoration(
+                                                    hintText:'Enter your valid email',
+                                                    border:InputBorder.none
+                                                ),
+                                                style: SafeGoogleFont (
+                                                  'Lato',
+                                                  fontSize: 16*ffem,
+                                                  fontWeight: FontWeight.w600,
+                                                  height: 1.2*ffem/fem,
+                                                  color: Color(0x68000000),
+                                                ),
+                                              ),
+                                            ),
+                                            InkWell(
+                                              onTap:(){
+                                                final snackBar = SnackBar(
+                                                  /// need to set following properties for best effect of awesome_snackbar_content
+                                                  elevation: 0,
+                                                  behavior: SnackBarBehavior.floating,
+                                                  backgroundColor: Colors.transparent,
+                                                  content: AwesomeSnackbarContent(
+                                                    title: 'Thanks for your request',
+                                                    message:
+                                                    'Will get back to you soon',
+
+                                                    /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
+                                                    contentType: ContentType.success,
+                                                  ),
+                                                );
+
+                                                ScaffoldMessenger.of(context)
+                                                  ..hideCurrentSnackBar()
+                                                  ..showSnackBar(snackBar);
+                                              },
+                                              child: Container(
+                                                // frame14268ftg (1:252)
+                                                padding: EdgeInsets.fromLTRB(24.42*fem, 8*fem, 24.42*fem, 7*fem),
+                                                height: double.infinity,
+                                                decoration: BoxDecoration (
+                                                  color: Color(0xff0271c5),
+                                                  borderRadius: BorderRadius.only (
+                                                    topLeft: Radius.circular(21.9999980927*fem),
+                                                    bottomRight: Radius.circular(21.9999980927*fem),
+                                                  ),
+                                                ),
+                                                child: Row(
+                                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                                  children: [
+                                                    InkWell(
+                                                      onTap:(){
+                                                        final snackBar = SnackBar(
+                                                          /// need to set following properties for best effect of awesome_snackbar_content
+                                                          elevation: 0,
+                                                          behavior: SnackBarBehavior.floating,
+                                                          backgroundColor: Colors.transparent,
+                                                          content: AwesomeSnackbarContent(
+                                                            title: 'Thanks for your request',
+                                                            message:
+                                                            'Will get back to you soon',
+
+                                                            /// change contentType to ContentType.success, ContentType.warning or ContentType.help for variants
+                                                            contentType: ContentType.success,
+                                                          ),
+                                                        );
+
+                                                        ScaffoldMessenger.of(context)
+                                                          ..hideCurrentSnackBar()
+                                                          ..showSnackBar(snackBar);
+                                                      },
+                                                      child: Container(
+                                                        // subcribenowLV2 (1:253)
+                                                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 7.17*fem, 0*fem),
+                                                        child: Text(
+                                                          'Subscribe Now',
+                                                          style: SafeGoogleFont (
+                                                            'Simonetta',
+                                                            fontSize: 16*ffem,
+                                                            fontWeight: FontWeight.w900,
+                                                            height: 1.6399999857*ffem/fem,
+                                                            letterSpacing: 1.28*fem,
+                                                            color: Color(0xffffffff),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      // naturaluserinterface2dj2 (1:254)
+                                                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 1*fem),
+                                                      width: 18*fem,
+                                                      height: 18*fem,
+                                                      child: Image.asset(
+                                                        'assets/page-1/images/natural-user-interface-2.png',
+                                                        fit: BoxFit.contain,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -3135,6 +3211,13 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
             ),
+    ) :  FadeInLeft(child: ContactPage()) :  WhyVidhaanPage();
+  }
+  final Uri _url = Uri.parse('https://docs.google.com/document/d/1kUZHVU_RVgqczYXuovP7sb069OE2unM8rJljjJo9Xcg/edit?usp=sharing');
+
+  Future<void> _launchUrl({bool isNewTab = true}) async {
+    await launchUrl(_url,
+      webOnlyWindowName: isNewTab ? '_blank' : '_self',
     );
   }
 }
@@ -3187,6 +3270,7 @@ class _RivePencil2State extends State<RivePencil2> {
 
     );
   }
+
 }
 
 
